@@ -1,5 +1,6 @@
 # sticky-navigation-website
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Image alt](https://github.com/AndyMagwayer/sticky-navigation-website/blob/main/Screenshot%202023-09-23%20152123.png
+)
 
 ## Deploy: https://website-hw-maga.netlify.app/
 
