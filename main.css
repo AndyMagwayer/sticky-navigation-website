@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Luckiest+Guy&family=Montserrat&family=Paytone+One&display=swap');
+
+body {
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+main {
+	max-height: 100vh;
+	overflow: auto;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+header {
+	color: #ffffff;
+	font-family: 'Croissant One', cursive;
+	font-size: 3rem;
+	text-shadow: -0.3rem 0.25rem #000000;
+	background-image: url('https://images.unsplash.com/photo-1542293011-a7c656888275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUxODU4NTJ8&ixlib=rb-4.0.3&q=85');
+	background-position: 10% 45%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 10rem;
+	position: relative;
+}
+
+header > div {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	padding-left: 2rem;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	backdrop-filter: blur(4px);
+}
+
+header > div > span {
+	margin-left: 1rem;
+}
+
+nav {
+	background-color: #0f0f0f;
+	width: 100%;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: flex-end;
+	position: sticky;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+nav > a {
+	color: #ffffff;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 1.2rem;
+	text-decoration: none;
+	height: var(--link-height);
+	padding: 1.25rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	box-sizing: border-box;
+	transition: filter 64ms ease-out;
+}
+
+nav > a:hover {
+	filter: drop-shadow(0 0 0.5rem #ffffff);
+}
+
+nav > a > span {
+	margin-left: 0.5rem;
+}
+
+nav > a::after {
+	content: '';
+	background-color: #ffffff;
+	width: 60%;
+	height: 0.2rem;
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	transform-origin: center;
+	transform: scaleX(0) translateX(-50%);
+	transition: transform 64ms ease-out;
+}
+
+/* This might be cleaner if I used SCSS instead I guess */
+main:has(#portfolio:target) > nav > a:first-child::after,
+main:not(:has(#portfolio:target)):not(:has(#press:target)):not(:has(#shop:target)):not(:has(#about:target)) > nav > a:first-child::after {
+	transform: scaleX(1) translateX(-50%);
+}
+
+main:has(#portfolio:target) > nav > a:first-child::after {
+	transform: scaleX(1) translateX(-50%);
+}
+
+main:has(#press:target) > nav > a:nth-child(2)::after {
+	transform: scaleX(1) translateX(-50%);
+}
+
+main:has(#shop:target) > nav > a:nth-child(3)::after {
+	transform: scaleX(1) translateX(-50%);
+}
+
+main:has(#about:target) > nav > a:last-child::after {
+	transform: scaleX(1) translateX(-50%);
+}
+
+section {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+section > div {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	box-sizing: border-box;
+	backdrop-filter: blur(8px);
+}
+
+section:nth-child(2n) > div {
+	align-items: flex-end;
+}
+
+section > div > h2 {
+	color: #ffffff;
+	font-family: 'Paytone One', sans-serif;
+	font-size: 2.5rem;
+	margin: 0;
+	margin-bottom: 1.5rem;
+}
+
+section > div > h2 > span {
+	margin-left: 0.5rem;
+}
+
+section > div > span {
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 1.5rem;
+}
+
+section > div > button {
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	background-color: #218ae5;
+	padding: 1rem 1.25rem;
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 64ms ease-out;
+}
+
+section > div > button:hover {
+	background-color: #2d93ec;
+}
+
+section > div > button:active,
+section > div > button:active {
+	background-color: #1a83de;
+}
+
+section > div > button > span {
+	margin-left: 0.25rem;
+}
+
+section:nth-child(2n) > div > span {
+	text-align: right;
+}
+
+#portfolio {
+	background-image: url('https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUxODY3MDh8&ixlib=rb-4.0.3&q=85');
+}
+
+#press {
+	background-image: url('https://images.unsplash.com/photo-1575507479993-7bb702d5e966?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUxODY5Mzl8&ixlib=rb-4.0.3&q=85');
+}
+
+#shop {
+	background-image: url('https://images.unsplash.com/photo-1559135467-c3a6d0fba1d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUxODY5NTV8&ixlib=rb-4.0.3&q=85');
+}
+
+#about {
+	background-image: url('https://images.unsplash.com/photo-1599597435338-adbf0f27b5b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUxODcwMDZ8&ixlib=rb-4.0.3&q=85');
+}
+    
