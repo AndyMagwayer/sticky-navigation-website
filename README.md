@@ -1,6 +1,8 @@
 # sticky-navigation-website
 ![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
 
+## Deploy: https://website-hw-maga.netlify.app/
+
 ## Instructions
 
 1. Scroll through the page to view the different sections.
